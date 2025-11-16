@@ -27,9 +27,9 @@ app.use("/api/users", profileRoute);
 connectDB();
 
 
-app.listen(PORT, () => {
-    console.log(`App Is Running On ${PORT}`)
+// app.listen(PORT, () => {
+//     console.log(`App Is Running On ${PORT}`)
 
 
 
-});
+// });
