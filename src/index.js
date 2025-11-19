@@ -41,21 +41,21 @@ import express from "express";
 import "dotenv/config";
 import cors from "cors";
 
-import authRoutes from "../Routes/authRoute.js";
-import bookRoutes from "../Routes/bookRoute.js";
-import appoinmentRoute from "../Routes/appoinmentRoute.js";
-import medicalRecordRoutes from "../Routes/medicallRecordRoute.js";
-import doctorRoutes from "../Routes/doctorRoutes.js";
-import profileRoute from "../Routes/profileRoute.js";
+import authRoutes from "./Routes/authRoute.js";
+import bookRoutes from "./Routes/bookRoute.js";
+import appoinmentRoute from "./Routes/appoinmentRoute.js";
+import medicalRecordRoutes from "./Routes/medicallRecordRoute.js";
+import doctorRoutes from "./Routes/doctorRoutes.js";
+import profileRoute from "./Routes/profileRoute.js";
 
-import { connectDB } from "../lib/lib.js";
+import { connectDB } from "./lib/lib.js";
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
-// Connect MongoDB (runs once)
-connectDB();
+// Connect MongoDB
+await connectDB();
 
 // Routes
 app.use("/api/auth", authRoutes);
