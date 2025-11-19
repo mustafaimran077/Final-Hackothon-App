@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
   res.json({ message: "Server started" });
 });
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT ;
 
 connectDB()
   .then(() => {
