@@ -1,24 +1,11 @@
-// import mongoose from "mongoose";
 
-
-// export const connectDB = async () => {
-//     try {
-//         const connect = await mongoose.connect(process.env.MONGO_URI)
-//         console.log(`Database Connected ${connect.connection.host}`);
-
-//     } catch (error) {
-//         console.log(error);
-//         process.exit(1)
-
-//     }
-// };
 
 
 import mongoose from "mongoose";
 
 let isConnected = false; // Cache connection
 
-export const connectDB = async () => {
+ const connectDB = async () => {
   if (isConnected) return; // Use cached connection
 
   try {
@@ -32,3 +19,4 @@ export const connectDB = async () => {
     throw new Error(error);
   }
 };
+export default connectDB
