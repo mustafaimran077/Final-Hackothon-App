@@ -21,6 +21,12 @@ app.use("/api/records", medicalRecordRoutes);
 app.use("/api/doctors", doctorRoutes);
 app.use("/api/users", profileRoute);
 
+app.get("/", (req, res) => {
+  res.json({
+    message: "server start",
+  });
+});
+
 connectDB()
 
 app.listen(process.env.PORT,()=>{
