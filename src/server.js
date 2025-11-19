@@ -21,11 +21,11 @@ app.use("/api/records", medicalRecordRoutes);
 app.use("/api/doctors", doctorRoutes);
 app.use("/api/users", profileRoute);
 
-// connectDB()
+connectDB()
 
-// app.listen(process.env.PORT,()=>{
-//     console.log("OKAY");
+app.listen(process.env.PORT,()=>{
+    console.log("OKAY");
     
-// })
+})
 
 export default app;
